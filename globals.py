@@ -1,7 +1,6 @@
 from threading import Lock
 
-qrs = 
-[
+qrs = [
         {
             'qrcode' : '406f0859-fc2c-4d70-ac29-4b3302049703',
             'filename' : '123456_AZERTY_20240124180212_OR.TXT',
