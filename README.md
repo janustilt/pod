@@ -1,6 +1,9 @@
-utilisation :
+## utilisation
+
 https://pod-2024.cyclic.app/getList?site=721  --> retourne un json avec les qrcodes pour la 721
-https://pod-2024.cyclic.app/setStatutScanned?qrcode=ab6d9f53-0d8c-47cb-9af0-fa58af2907d9 --> après avoir scanné le qr en question
+
+https://pod-2024.cyclic.app/setStatutScanned?qrcode=ab6d9f53-0d8c-47cb-9af0-fa58af2907d9&qui=MACadress --> après avoir scanné le qr en question
+
 https://pod-2024.cyclic.app/getList?site=721  --> voir le résultat
 
 
