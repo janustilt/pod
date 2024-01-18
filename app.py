@@ -2,12 +2,6 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# Endpoint pour le service "pod"
-@app.route('/pod', methods=['GET'])
-def get_pod():
-    # Récupérer le paramètre "site" depuis la requête du client
-    site_param = request.args.get('site')
-
     qrs = [
         {
             'qrcode' : '406f0859-fc2c-4d70-ac29-4b3302049703',
@@ -70,6 +64,13 @@ def get_pod():
             'qui' : 'addQRcodeRC'
         }
     ]
+
+
+# Endpoint pour le service "getList"
+@app.route('/getList', methods=['GET'])
+def get_getList():
+    # Récupérer le paramètre "site" depuis la requête du client
+    site_param = request.args.get('site')
         
     # Vérifier si le paramètre "site" est fourni
     if site_param is None:
@@ -81,6 +82,20 @@ def get_pod():
     response_data = filtered_qrs
 
     return jsonify(response_data)
+
+# Endpoint pour le service "setStatutScanned"
+@app.route('/setStatutScanned', methods=['GET'])
+def get_setStatutScanned():
+    # Récupérer le paramètre "site" depuis la requête du client
+    qr = request.args.get('qrcode')
+        
+    # Vérifier si le paramètre "qrcode" est fourni
+    if qr is None:
+        return jsonify({'error': 'Le paramètre "qrcode" est requis'}), 400
+
+    return jsonify({'result': 'ok'}), 200
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
