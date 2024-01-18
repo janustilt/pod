@@ -21,6 +21,7 @@ def get_pod():
             'creation_date' : '2024-01-24 18:06:12',
             'qui' : 'addQRcode'
         },
+        {
             'qrcode' : '66051d36-a268-4292-b6fd-6187aa7871d3',
             'filename' : '123456_70123456789_20240124181002_OR.TXT',
             'type' : 'LEGACY',
@@ -38,8 +39,10 @@ def get_pod():
     if site_param is None:
         return jsonify({'error': 'Le paramètre "site" est requis'}), 400
 
+    filtered_qrs = [qr for qr in qrs if qr['site'] == site_param]
+    
     # Générer la réponse JSON en fonction du paramètre "site"
-    response_data = qrs
+    response_data = filtered_qrs
 
     return jsonify(response_data)
 
