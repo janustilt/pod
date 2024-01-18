@@ -18,9 +18,14 @@ def get_list():
     return jsonify(response_data)
 
 # Endpoint pour le service "setStatutScanned"
-@app.route('/setStatutScanned', methods=['POST'])
+@app.route('/setStatutScanned', methods=['GET', 'POST'])
 def set_statut_scanned():
-    qrcode_param = request.json.get('qrcode')
+    if request.method == 'GET':
+        qrcode_param = request.args.get('qrcode')
+    elif request.method == 'POST':
+        qrcode_param = request.json.get('qrcode')
+    else:
+        return jsonify({'error': 'Méthode non autorisée'}), 405
 
     if qrcode_param is None:
         return jsonify({'error': 'Le paramètre "qrcode" est requis'}), 400
