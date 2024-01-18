@@ -22,8 +22,10 @@ def get_list():
 def set_statut_scanned():
     if request.method == 'GET':
         qrcode_param = request.args.get('qrcode')
+        qui_param = request.args.get('qui')
     elif request.method == 'POST':
         qrcode_param = request.json.get('qrcode')
+        qui_param = request.json.get('qui')
     else:
         return jsonify({'error': 'Méthode non autorisée'}), 405
 
@@ -34,9 +36,10 @@ def set_statut_scanned():
         for qr in qrs:
             if qr['qrcode'] == qrcode_param:
                 qr['statut'] = 'SCANNED'
+                if qui_param is not None:
+                    qr['qui'] = qui_param
                 break
 
     return jsonify({'success': True})
-
 if __name__ == '__main__':
     app.run(debug=True)
