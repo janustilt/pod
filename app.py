@@ -36,10 +36,12 @@ def set_statut_scanned():
         for qr in qrs:
             if qr['qrcode'] == qrcode_param:
                 qr['statut'] = 'SCANNED'
+                site = qr['site']
                 if qui_param is not None:
                     qr['qui'] = qui_param
                 break
 
-    return jsonify({'success': True})
+    return jsonify({'site': site})
+    
 if __name__ == '__main__':
     app.run(debug=True)
