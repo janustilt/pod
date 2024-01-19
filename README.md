@@ -38,4 +38,4 @@ Run: `bin/start`
 
 Join us on Discord: [https://discord.cyclic.sh](https://discord.cyclic.sh)
 
-Enjoy!
+Enjoy!!
