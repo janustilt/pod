@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+//from flask_cors import CORS
 from globals import qrs, qrs_lock
 
 app = Flask(__name__)
-CORS(app)  # Active CORS pour toutes les routes
+//CORS(app)  # Active CORS pour toutes les routes
 
 # Endpoint pour le service "getList"
 @app.route('/getList', methods=['GET'])
