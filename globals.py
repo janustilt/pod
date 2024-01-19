@@ -60,6 +60,66 @@ qrs = [
             'statut' : 'RC',
             'creation_date' : '2024-01-24 8:00:13',
             'qui' : 'addQRcodeRC'
+        },
+        {
+            'qrcode' : '2a8888ea-6079-4653-a79a-f4356baa2d18',
+            'filename' : '239801_76027313210_20240119102035_OR.TXT',
+            'type' : 'LEGACY',
+            'rest_home_name' : 'Releghem',
+            'logistic_tag' : 'Afdeling 3',
+            'officine' : '150',
+            'site' : 'SPL',
+            'statut' : 'LEGACY',
+            'creation_date' : '2024-01-19 8:00:13',
+            'qui' : 'addQRcodeRC'
+        },
+        {
+            'qrcode' : 'e0f886f2-61a7-473e-b9de-2822a1741001',
+            'filename' : '237708_73261922110_20240119101926_OR.TXT',
+            'type' : 'RC',
+            'rest_home_name' : 'Le Gibloux',
+            'logistic_tag' : 'C',
+            'officine' : '159',
+            'site' : 'SPL',
+            'statut' : 'TPM',
+            'creation_date' : '2024-01-19 8:00:13',
+            'qui' : 'addQRcodeRC'
+        },
+        {
+            'qrcode' : '27526a23-4bff-4a36-a8f2-5c7a1c41d7d1',
+            'filename' : '237708_74114235110_20240119101056_OR.TXT',
+            'type' : 'TPM',
+            'rest_home_name' : 'Val des Fleurs',
+            'logistic_tag' : 'London',
+            'officine' : '159',
+            'site' : 'SPL',
+            'statut' : 'TPM',
+            'creation_date' : '2024-01-19 8:00:13',
+            'qui' : 'addQRcodeRC'
+        },
+        {
+            'qrcode' : 'b60e4240-f7e2-4b69-b6d6-ea859b78f859',
+            'filename' : '237708_73269147110_20240119100641_OR.TXT',
+            'type' : 'LEGACY',
+            'rest_home_name' : 'Chateau Belle chasse',
+            'logistic_tag' : '2ME',
+            'officine' : '159',
+            'site' : 'SPL',
+            'statut' : 'LEGACY',
+            'creation_date' : '2024-01-19 8:00:13',
+            'qui' : 'addQRcodeRC'
+        },
+        {
+            'qrcode' : '6ce1f85b-7789-407d-aafe-363209a3b238',
+            'filename' : '211604_00000BRUGGE_20240119093023_OR.txt',
+            'type' : 'RC',
+            'rest_home_name' : 'PC BRUGGE LEGE WEG',
+            'logistic_tag' : 'ciel',
+            'officine' : '721',
+            'site' : '721',
+            'statut' : 'RC',
+            'creation_date' : '2024-01-24 8:00:13',
+            'qui' : 'addQRcodeRC'
         }
 ]
 
